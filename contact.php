@@ -108,7 +108,7 @@ input[type=number]::-webkit-outer-spin-button {
 	.jumbotronEffecct{
 	background: url("images/BGGIF.gif") repeat;
 	}
-	
+
 	.borders {
 	border: 5px solid orange;
 	box-shadow: 0px 0px 0px 5px blue;
@@ -127,7 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
                         HR Symphony `15
                     </a>
                 </li>
-                <li><a href="index.html" class="hvr-rectangle-out">Home</a></li>
+                <li><a href="index.php" class="hvr-rectangle-out">Home</a></li>
                 <li><a href="events.html" class="hvr-rectangle-out">Events</a></li>
                 <!--<li><a href="StuProfile.html" class="hvr-rectangle-out">Student Profile</a></li>-->
                 <li><a href="contact.php" class="hvr-rectangle-out">Contact Us</a></li>
@@ -139,7 +139,7 @@ input[type=number]::-webkit-outer-spin-button {
         <div id="page-content-wrapper">
 
             <div class="jumbotron jumbotronEffecct borders"  style="opacity:1; border-radius:10px; height:150px;">
-              
+
                 <div class="col-md-1-12">
                 <div class="col-md-1"><img src="images/logo1.PNG" class="" style="width:100px; margin-top: -18%; position: absolute; clip: rect(0px,110px,200px,0px);"></div>
                 <div class="col-md-8"><h2 class=" wow bounceInRight animated" style="padding-left:20px; color:white; font-family: 'Montserrat', sans-serif; margin-left:10%;" > <b>Welcome</b>, HR Symphony `15</h2></div>
@@ -213,20 +213,20 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>
                         </form>
 						<?php
-						if (isset($_POST['submit'])) { 
+						if (isset($_POST['submit'])) {
 							  $name = $_POST['name'];
 							  $email = $_POST['email'];
 							  $number = $_POST['number'];
 							  $msg = $_POST['msg'];
 							  $ToEmail = 'cyborgroger@gmail.com';
-							  $EmailSubject = 'HR`Symphony contact form '; 
-							  $mailheader = "From: ".$_POST["email"]."\r\n"; 
-							  $mailheader .= "Reply-To: ".$_POST["email"]."\r\n"; 
-							  $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-							  $MESSAGE_BODY = "Name: ".$_POST["name"]."<br>"; 
-							  $MESSAGE_BODY .= "Email: ".$_POST["email"]."<br>"; 
-							  $MESSAGE_BODY .= "Mobile:".$_POST['number']."<br />";  
-							  $MESSAGE_BODY .= "Message: ".nl2br($_POST["msg"])."<br>"; 
+							  $EmailSubject = 'HR`Symphony contact form ';
+							  $mailheader = "From: ".$_POST["email"]."\r\n";
+							  $mailheader .= "Reply-To: ".$_POST["email"]."\r\n";
+							  $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n";
+							  $MESSAGE_BODY = "Name: ".$_POST["name"]."<br>";
+							  $MESSAGE_BODY .= "Email: ".$_POST["email"]."<br>";
+							  $MESSAGE_BODY .= "Mobile:".$_POST['number']."<br />";
+							  $MESSAGE_BODY .= "Message: ".nl2br($_POST["msg"])."<br>";
 							  if(mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader))
 							  {
 							  echo "<script>alert('Mail was sent !');</script>";
@@ -244,7 +244,7 @@ input[type=number]::-webkit-outer-spin-button {
           <!-- :form -->
             </div>
       <br/>
-      
+
     </div>
         <!-- /#page-content-wrapper -->
     </div>
@@ -284,7 +284,7 @@ input[type=number]::-webkit-outer-spin-button {
 	  }
     })
 	</script>
-    
+
     <script type="text/javascript">
     $(document).ready(function() {
         // Generate a simple captcha

@@ -1,3 +1,14 @@
+<?php
+  error_reporting('E_ALL');
+  ini_set('display_errors', 'off');
+  date_default_timezone_set("Asia/Kolkata");
+  $today  = strtotime(date('d-m-Y H:i:s'));
+  $event_day = strtotime('2016-02-06 00:00:00'); // Customize event time
+  $diff_in_seconds = $event_day - $today;
+  if ($diff_in_seconds < 0 ) {
+    $diff_in_seconds = 0;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -106,7 +117,7 @@
 	.jumbotronEffecct{
 	background: url("images/BGGIF.gif") repeat;
 	}
-	
+
 	.borders {
 	border: 5px solid orange;
 	box-shadow: 0px 0px 0px 5px blue;
@@ -116,14 +127,16 @@
     text-align: justify;
     text-justify: inter-word;
 	}
-	@media (min-width: 1200px)
+	@media (min-width: 1200px) {
 	.container {
 		width: 100%;
 	}
-	@media screen and (min-width: 768px)
+}
+	@media screen and (min-width: 768px){
 	.container {
 		width: 100%;
 	}
+}
     </style>
   </head>
   <body>
@@ -150,7 +163,7 @@
         <div id="page-content-wrapper">
 
             <div class="jumbotron jumbotronEffecct borders"  style="opacity:1; border-radius:10px; height:150px;">
-              
+
                 <div class="col-md-1-12">
                 <div class="col-md-1"><img src="images/logo1.PNG" class="" style="width:100px; margin-top: -18%; position: absolute; clip: rect(0px,110px,200px,0px);"></div>
                 <div class="col-md-8"><h2 class=" wow bounceInRight animated" style="padding-left:20px; color:white; font-family: 'Montserrat', sans-serif; margin-left:10%;" > <b>Welcome</b>, HR Symphony `15</h2></div>
@@ -230,7 +243,7 @@
             </div>
           </div>
         </div>
-		
+
 		<div class="Content-body">
               <div class="container jumbotron">
                <section class="CAboutUS">
@@ -242,10 +255,10 @@
 					<p> &nbsp; &nbsp; M. A. HUMAN RESOURCE MANAGEMENT is an intensive two year program aimed at making future HR leaders by preparing a global talent engine, capable of meeting the challenges of the competitive business environment. Students are imbibed with holistic personality skills that enhance their Employability.</p>
 			   </section>
 			   </div>
-                
+
           <!-- :form -->
             </div>
-		
+
       </div>
       <br/>
       <div class="footer"  style="text-align:center;">
@@ -304,7 +317,7 @@
               }
           });
 
-          clock.setTime(220880);
+          clock.setTime(<?php echo $diff_in_seconds; ?>);
           clock.setCountdown(true);
           clock.start();
 
