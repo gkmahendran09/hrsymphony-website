@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="mrlong.com@gmail.com">
+    <title>bootstrap3 of validation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap3-validation.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <link href="bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="respond.min.js" type="text/javascript"></script>
+    <script src="html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+  </head>
+
+  <script type="text/javascript">
+  $(function(){
+    $("#form1").validation({icon:true});
+    $("#submit1").on('click',function(event){
+      if ($("#form1").valid(this,'dsa')==false){
+        return false;
+      }
+    })
+
+    $("#form2").validation();
+    $("#submit2").on('click',function(event){
+      if ($("#form2").valid()==false){
+        alert('Please1');
+        return false;
+      }
+    });
+
+
+  })
+</script>
+
+  <body>
+    <h1><a href="js/bootstrap3-validation.js">bootstrap3 of validation</a></h1>
+
+    <div class="container">
+    <div class="page-header">
+      <h1><small>Subtext for header</small></h1>
+    </div>
+
+     <form class="form-horizontal"  id="form1" action="#" role="form">
+      <div class="form-group">
+        <label for="mail" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="mail" placeholder="xxxx@qq.com" check-type="mail required">
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <span class="help-block" style="color: #000000;padding-top: 10px;">fill</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">a</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" check-type="required" required-message="aa">
+        </div>
+      </div>
+
+       <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">s</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" check-type="mobile" >
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="pw1" class="col-sm-2 control-label">d</label>
+        <div class="col-sm-6">
+          <input type="password" class="form-control" id="pw1" check-type="required" minlength="6">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pw2" class="col-sm-2 control-label">a</label>
+        <div class="col-sm-6">
+          <input type="password" class="form-control" id="pw2" check-type="required" minlength="6">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="vercode" class="col-sm-2 control-label">w</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="vercode" check-type="number" range="2.2,5">
+          <button class="btn btn-link" type="button" data-toggle="tooltip" title="ww" data-placement="right" id="getvercode" >ww</button>
+        </div>
+      </div>
+
+       <div class="form-group">
+        <label for="vercode" class="col-sm-2 control-label">c</label>
+        <div class="col-sm-6">
+          <textarea  class="form-control" id="vercode" check-type="required" rows="3"></textarea>
+
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" id="submit1" class="btn btn-primary col-sm-4">submit</button>
+          <button type="reset"  class="btn btn-primary col-sm-4">reset</button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+
+<div class="container">
+<div class="page-header">
+    <h1>cc <small>Subtext for header</small></h1>
+</div>
+<form role="form" id="form2">
+  <div class="form-group has-error">
+    <label for="exampleInputEmail1" >Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" check-type="required">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" >Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" check-type="required">
+  </div>
+  <div class="form-group ">
+    <label for="exampleInputFile">File input</label>
+    <input type="File" id="exampleInputFile" class="form-control" check-type="required">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+
+  <div class="checkbox ">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+
+    <button type="submit" id="submit2" class="btn btn-primary col-sm-4">c</button>
+</form>
+</div>
+
+
+  </body>
+</html>

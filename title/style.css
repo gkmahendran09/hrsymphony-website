@@ -1,0 +1,131 @@
+
+/* =Template
+-------------------------------------------------------------- */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 30px; }
+/* =Header
+-------------------------------------------------------------- */
+header {
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s; }
+  header div.logo {
+    background: url("http://mssw.in/img/logo.png") no-repeat ;
+    width:590px;
+    background-size: 100%;
+    display: inline-block;
+    height: 82px;
+    line-height: 150px;
+    float: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  header nav {
+    display: inline-block;
+    float: right; }
+    header nav a {
+      line-height: 50px;
+      color: #9fdbfc;
+      font-weight: 700;
+      font-size: 12px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      header nav a:hover {
+        color: white; }
+  header.smaller {
+    height: 75px; }
+	header.smaller nav{
+		box-shadow: 0px 3px 5px #888888;
+	}
+    header.smaller div.logo {
+      line-height: 75px;
+      font-size: 30px; }
+    header.smaller nav a {
+      line-height: 0px; 
+	  }
+/* =Footer
+-------------------------------------------------------------- */
+/* =Extras
+-------------------------------------------------------------- */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 660px) {
+  /* =Header
+  -------------------------------------------------------------- */
+  header div.logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center; }
+  header nav {
+    display: block;
+    float: none;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto; }
+    header nav a {
+      line-height: 50px;
+      margin: 0 10px; }
+  header.smaller {
+    height: 75px; }
+    header.smaller div.logo {
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px; }
+    header.smaller nav {
+      height: 35px; }
+      /* header.smaller nav a {
+        line-height: 35px; } */ }
+@media all and (max-width: 768px) {
+  .container {
+    width: 100%; }
+     header div.logo {
+ background: url("http://mssw.in/img/logo.png") no-repeat ; 
+ width:85px;
+}
+.navbar-default, .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    background-color: rgba(245, 245, 245, 0.4);
+}
+}
+@media (min-width: 769px) and (max-width: 1160px){
+  header div.logo {
+ background: url("http://mssw.in/img/logo.png") no-repeat ; 
+ width:85px;
+}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+  margin-left: -50px;
+}
+.navbar-default, .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    background-color: rgba(245, 245, 245, 0.4);
+}
+}
